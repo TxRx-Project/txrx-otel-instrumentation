@@ -19,7 +19,6 @@ export enum TELEMETRY {
 /**
  * A proxy symbol for the for the opentelemetry span interface.
  */
-
 export const SpanArtifact = Symbol('SpanArtifact');
 
 /**
