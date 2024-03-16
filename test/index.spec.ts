@@ -4,11 +4,11 @@ import Span from '../src/opentelemetry/span';
 import * as Types from '../types/instrumentation.types';
 
 test('index exports', () => {
-    expect(typeof Index.Instrumentation).toBe(typeof Instrumentation);
-    expect(typeof Index.Span).toBe(typeof Span);
-    expect(typeof Index.SpanArtifact).toBe(typeof Types.SpanArtifact);
-    expect(typeof Index.Spanner).toBe(typeof Types.Spanner);
-    expect(typeof Index.TELEMETRY).toBe(typeof Types.TELEMETRY);
+    expect(Index.Instrumentation).toBe(Instrumentation);
+    expect(Index.Span).toBe(Span);
+    expect(Index.SpanArtifact).toBe(Types.SpanArtifact);
+    expect(Index.Spanner).toBe(Types.Spanner);
+    expect(Index.TELEMETRY).toBe(Types.TELEMETRY);
 });
 
 test('index scope', () => {
