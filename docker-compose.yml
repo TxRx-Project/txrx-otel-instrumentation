@@ -1,0 +1,19 @@
+version: '3'
+services:
+  node:
+    container_name: txrx-otel-instrumentation-node
+    image: txrx/otel-instrumentation-node:devel
+    user: "${UID}:${GID}"
+    build:
+      context: .
+      args:
+        GIT_NAME: ${GIT_NAME}
+        GIT_EMAIL: ${GIT_EMAIL}
+    volumes:
+      - ./:/usr/src/app
+      - ~/.npmrc:/home/node/.npmrc
+      - $SSH_AUTH_SOCK:$SSH_AUTH_SOCK
+    environment:
+      - SSH_AUTH_SOCK=$SSH_AUTH_SOCK
+    env_file:
+      - .env
