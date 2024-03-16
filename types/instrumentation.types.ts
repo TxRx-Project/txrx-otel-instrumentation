@@ -7,7 +7,7 @@ import Span from '../src/opentelemetry/span';
  * - CONSOLE: use the logs 
  * 
  * - EXPORTED: use an external collector
- * s
+ * 
  * - NOTEL: disable telemetry entirely
  */
 export enum TELEMETRY {
